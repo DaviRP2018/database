@@ -1,0 +1,18 @@
+# Use postgres/example user/password credentials
+version: '3.6'
+
+services:
+  database:
+    container_name: illusion-postgres
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: illusion
+      POSTGRES_PASSWORD: 7CkHJM+=<Yjt9k
+      POSTGRES_DB: local_illusion
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  database-data:
